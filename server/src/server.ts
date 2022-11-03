@@ -15,7 +15,7 @@ async function bootstrap() {
     origin: true,
   });
 
-  app.get("/", async (request, reply) => {
+  app.get("/pools/count", async (request, reply) => {
     const count = await prisma.pool.count();
 
     return { count };
